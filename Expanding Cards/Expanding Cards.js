@@ -1,45 +1,33 @@
-const imagesList = document.querySelector(".container");
-const navigationList = document.querySelector(".container");
-
 const images = document.querySelectorAll(".container > div");
 const navigation = document.querySelectorAll(".navigation > div");
 
-imagesList.addEventListener('click', (e)=>{
+getid(images);
+getid(navigation);
 
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    removeClassForGroup(images, "active-image");
+    removeClassForGroup(navigation, "active-line");
 
-  if (e.target.className == "image"){
-
-    images.forEach(el=> {
-
-      if (el.classList.contains("active-image")){
-
-        el.classList.add("image");
-        el.classList.remove("active-image")
-        
+    navigation.forEach((el) => {
+      if (image.id == el.id) {
+        el.classList.add("active-line");
       }
-  
-    })
+    });
 
-    e.target.classList.add("active-image")
-    e.target.classList.remove("image")
-    
-  
-  }
-    
+    image.classList.add("active-image");
+  });
+});
 
-})//удосконалити код. додати навігацион
+function getid(groupelem) {
+  let i = 0;
+  groupelem.forEach((el) => {
+    el.id = i++;
+  });
+}
 
-// images.forEach(image => {
-//   image.addEventListener('click', () => {
-//       removeActiveClasses()
-//       image.classList.add('image-active')
-//   })
-// })
-
-// function removeActiveClasses() {
-//   images.forEach(image => {
-//       image.classList.remove('image-active')
-//   })
-// }
-
-
+function removeClassForGroup(group, removeClass) {
+  group.forEach((el) => {
+    el.classList.remove(removeClass);
+  });
+}
