@@ -31,3 +31,5 @@ function removeClassForGroup(group, removeClass) {
     el.classList.remove(removeClass);
   });
 }
+
+//add ivent slider with swipe

@@ -68,3 +68,18 @@ h3{
   background: #c3c3c3;
   transition: width 1s ease-in;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .image:nth-of-type(4),
+  .image:nth-of-type(5) {
+    display: none;
+  }
+  .line:nth-of-type(4),
+  .line:nth-of-type(5) {
+    display: none;
+  }
+}
