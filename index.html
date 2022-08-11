@@ -7,9 +7,15 @@
     <title>50 Tiny projects</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/Expanding Cards/Expanding Cards.css" />
-    <script src="/Expanding Cards/Expanding Cards.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="/modules/Expanding Cards/Expanding Cards.css"
+    />
+    <link rel="stylesheet" href="/modules/Progress Steps/Progress Steps.css" />
+
+    <script type="module" src="script.js" defer></script>
   </head>
+
   <body>
     <div class="container">
       <div
@@ -58,11 +64,33 @@
       </div>
     </div>
     <div class="navigation">
-      <div class="active-line line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+      <div class="active-dots dots"></div>
+      <div class="dots"></div>
+      <div class="dots"></div>
+      <div class="dots"></div>
+      <div class="dots"></div>
+    </div>
+
+    <div class="progress-steps">
+
+      <div class="lines">
+        <div id="line" class="active-line"></div>
+      </div>
+
+      <div class="steps">
+        <div class="step active-step" >1</div>
+        <div class="step" id="1">2</div>
+        <div class="step" id="2">3</div>
+        <div class="step" id="3">4</div>
+      </div>
+
+      <div class="btns">
+        <a href="" id="prev" class="btn deactivate" >prev</a>
+        <a href="" id="next" class="btn">next</a>
+      </div>
+
+
+      
     </div>
   </body>
 </html>
